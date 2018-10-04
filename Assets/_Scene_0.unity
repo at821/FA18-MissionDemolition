@@ -447,7 +447,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3dbf3918bb70d458764f69a94a56c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabProjectile: {fileID: 1782680380700802, guid: e4c739a39ee0ae540abd9140e77e904f,
+    type: 2}
+  velocityMult: 8
   launchPoint: {fileID: 0}
+  launchPos: {x: 0, y: 0, z: 0}
+  projectile: {fileID: 0}
+  aimingMode: 0
 --- !u!1 &737611854
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +633,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1379229832}
+      - m_Target: {fileID: 0}
         m_MethodName: SwitchView
         m_Mode: 5
         m_Arguments:
@@ -782,8 +788,6 @@ GameObject:
   - component: {fileID: 1379229824}
   - component: {fileID: 1379229830}
   - component: {fileID: 1379229829}
-  - component: {fileID: 1379229832}
-  - component: {fileID: 1379229831}
   m_Layer: 0
   m_Name: _Main Camera
   m_TagString: MainCamera
@@ -821,7 +825,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.1779548, g: 0.677529, b: 0.8773585, a: 0.019607844}
+  m_BackGroundColor: {r: 0.058339275, g: 0.40225428, b: 0.5377358, a: 0.019607844}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -876,9 +880,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257823764008d4568ae7abb9a7a15f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numClouds: 10
-  cloudPrefab: {fileID: 1289228957973438, guid: f11a3535bbceb4c15b698050f281808b,
-    type: 2}
+  numClouds: 40
+  cloudPrefab: {fileID: 0}
   cloudPosMin: {x: -50, y: -5, z: 10}
   cloudPosMax: {x: 150, y: 100, z: 10}
   cloudScaleMin: 1
@@ -892,31 +895,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1379229823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 958507350bfd1c54eaaabeb5e1c4a579, type: 3}
+  m_Script: {fileID: 11500000, guid: eed1e6f7649b83143984c6a1c58dd486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1379229831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1379229823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86abdf47f7f02487aab7fb7f3db9b170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1379229832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1379229823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59e4de208c0874b0483735d6b802e5f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  easing: 0.05
+  minXY: {x: 0, y: 0}
+  camZ: 0
 --- !u!1 &1665489582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,8 +1356,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1926026912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 4}
+  m_LocalPosition: {x: 100, y: -10, z: 0}
+  m_LocalScale: {x: 400, y: 1, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
