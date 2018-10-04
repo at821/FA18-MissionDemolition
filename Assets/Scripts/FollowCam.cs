@@ -24,7 +24,7 @@ public class FollowCam : MonoBehaviour {
         //get position of the poi
         Vector3 destination = POI.transform.position;
 
-        //Vector3 destination;
+        Vector3 destination;
         //if there is no poi, return to P:000
         if (POI == null)        {
             destination = Vector3.zero;

@@ -882,7 +882,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numClouds: 40
-  cloudPrefab: {fileID: 0}
+  cloudPrefab: {fileID: 1289228957973438, guid: f11a3535bbceb4c15b698050f281808b,
+    type: 2}
   cloudPosMin: {x: -50, y: -5, z: 10}
   cloudPosMax: {x: 150, y: 100, z: 10}
   cloudScaleMin: 1
