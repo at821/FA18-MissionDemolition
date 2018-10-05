@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.05660379, g: 0.028568894, b: 0.028568894, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -614,7 +614,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.6509434, g: 0.6417319, b: 0.6417319, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -921,6 +921,8 @@ MonoBehaviour:
   castles:
   - {fileID: 1587460899074312, guid: b783c705337c04f418c8406c34574c5b, type: 2}
   - {fileID: 1587460899074312, guid: df16063208250334f97932e0cd7135f6, type: 2}
+  - {fileID: 1587460899074312, guid: ca8fc68dc1230554fb73ac5f3e632790, type: 2}
+  - {fileID: 1587460899074312, guid: af39a6dc3467e4b4a9edbbfe03527dab, type: 2}
   level: 0
   levelMax: 0
   shotsTaken: 0
@@ -974,7 +976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.03773582, g: 0.027233869, b: 0.027233869, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

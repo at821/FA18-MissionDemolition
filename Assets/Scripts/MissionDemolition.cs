@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum GameMode
-{
+public enum GameMode{
     idle,
     playing,
     levelEnd
@@ -51,7 +50,7 @@ public class MissionDemolition : MonoBehaviour {
         castle.transform.position = castlePos;
         shotsTaken = 0;
 
-        SwitchView("wSho Both");
+        SwitchView("Show Both");
         ProjectileLine.S.Clear();
 
         Goal.goalMet = false;
@@ -62,12 +61,14 @@ public class MissionDemolition : MonoBehaviour {
     }
 
     void UpdateGUI()    {
-        uitLevel.text = "Level: " + (level + 1) + "of " + levelMax;
+        uitLevel.text = "Level: " + (level + 1 ) + "of " + levelMax;
         uitShots.text = "Shots Taken: " + shotsTaken;
     }
 
     void Update()    {
-        if((mode ==GameMode.playing) && Goal.goalMet)
+        UpdateGUI();
+
+        if ((mode ==GameMode.playing) && Goal.goalMet)
         {
             mode = GameMode.levelEnd;
             SwitchView("Show Both");
@@ -105,7 +106,7 @@ public class MissionDemolition : MonoBehaviour {
                 break;
         }
     }
-    public static void ShotFired()    {
+    public static void shotFired()    {
         S.shotsTaken++;
     }
 }
