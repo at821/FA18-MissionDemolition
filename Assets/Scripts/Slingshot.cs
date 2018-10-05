@@ -32,7 +32,7 @@ public class Slingshot : MonoBehaviour {
     void Awake()    {
         S = this;
 
-        Transform launchPointTrans = transform.FindChild("LaunchPoint");
+        Transform launchPointTrans = transform.Find("LaunchPoint");
         launchPoint = launchPointTrans.gameObject;
         launchPoint.SetActive(false);
         launchPos = launchPointTrans.position;
@@ -72,7 +72,7 @@ public class Slingshot : MonoBehaviour {
         Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
        
         //find the delta from the launchpos to the mousepos3D
-        Vector3 mouseDelta = mousePos3D = launchPos;
+        Vector3 mouseDelta = mousePos3D - launchPos;
         
         //limit mousedelta to the radius of the slingshot sphere collider
         float maxMagnitude = this.GetComponent<SphereCollider>().radius;
@@ -88,9 +88,13 @@ public class Slingshot : MonoBehaviour {
             //The mouse had been released
             aimingMode = false;
             projectileRigidbody.isKinematic = false;
+
             projectileRigidbody.velocity = -mouseDelta * velocityMult;
+
             FollowCam.POI = projectile;
+
             projectile = null;
+
             MissionDemolition.ShotFired();
             ProjectileLine.S.poi = projectile;
         }
