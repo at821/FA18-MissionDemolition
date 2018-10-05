@@ -14,15 +14,15 @@ public class FollowCam : MonoBehaviour {
     public float camZ; //desired Zpos of the camera
 
     void Awake()    {
-        camZ = this.transform.position.x;
+        camZ = this.transform.position.z;
     }
 
     void FixedUpdate()    {
         //if there's only one line following an if, it doesn't need braces
-        if (POI == null) return; //return if no poi
+        //if (POI == null) return; //return if no poi
 
         //get position of the poi
-        Vector3 destination = POI.transform.position;
+        //Vector3 destination = POI.transform.position;
 
         Vector3 destination;
         //if there is no poi, return to P:000
